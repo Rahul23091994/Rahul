@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="New Section" section_id="aa035d06db7610102aba7b38689619c2" sys_domain="global" table="x_263984_work_assi_work_assigment" version="3" view="workspace">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>6a039d06db7610102aba7b3868961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>ee039d06db7610102aba7b3868961931</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>2</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>66039d06db7610102aba7b3868961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>urgency</element>
+            <position>3</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>ea039d06db7610102aba7b3868961932</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>62039d06db7610102aba7b3868961933</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>e6039d06db7610102aba7b3868961933</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>6e039d06db7610102aba7b3868961933</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>e2039d06db7610102aba7b3868961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>impact</element>
+            <position>8</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_id>6a039d06db7610102aba7b3868961934</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">aa035d06db7610102aba7b38689619c2</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>New Section</caption>
+            <header>false</header>
+            <name>x_263984_work_assi_work_assigment</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>aa035d06db7610102aba7b38689619c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_263984_work_assi_work_assigment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+            <sys_update_name>sys_ui_section_aa035d06db7610102aba7b38689619c2</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:55</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Workspace" name="workspace">4a2cec89dbe210102aba7b3868961947</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

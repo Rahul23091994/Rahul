@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_header_footer">
+    <sp_header_footer action="INSERT_OR_UPDATE">
+        <category>hr</category>
+        <client_script><![CDATA[function escHeaderController($rootScope, $scope, $window, spUtil, $location, $uibModal, cabrillo, $timeout, i18n,spContextManager) {
+	var c = this;
+	$scope.userID = $scope.user.sys_id;
+	$scope.todosPopupId = c.data.isMobile?'#popup_todos_mobile':'';
+	$scope.casesPopupId = c.data.isMobile?'#popup_cases_mobile':'';
+	$scope.popupType = c.data.isMobile?'collapse':'dropdown';
+	$scope.expanded = false;
+	$scope.cartItemCount = 0;
+	$scope.isVAActive = c.data.isVAActive;
+	
+	c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
+
+	var MOBILE_DEVICE_SCREEN_WIDTH = 767;
+	$scope.mobileDevice = c.data.isMobile || ($window.innerWidth < MOBILE_DEVICE_SCREEN_WIDTH);
+	$scope.showChat = false;
+	if (!$scope.showChat)
+		$('div.sp-ac-container').hide();
+	$scope.toggleChat = function() {
+		spContextManager.getContextForKey('agent-chat', true).then(function(context) {
+			context = context || {};
+			context.show_ask_a_question_prechat = false;
+			spContextManager.updateContextForKey('agent-chat', context);
+		});
+		$scope.showChat = !$scope.showChat;
+		$('a#va_chat').toggleClass(' active-chat');
+		var isOpen = $('button.sp-ac-btn.open').length !=0;
+		if($scope.showChat){
+			$('div.sp-ac-container').show();
+			if (!isOpen) {
+			$scope.$$postDigest(function(){
+				$('button.sp-ac-btn').trigger('click');
+			});
+			}
+		} else {
+			$('div.sp-ac-container').hide();
+			if (isOpen) {
+			$scope.$$postDigest(function(){
+				$('button.sp-ac-btn').trigger('click');
+			});
+			}
+		}
+	};
+
+	if (cabrillo.isNative())
+		$scope.isViewNative = true;
+
+	$scope.$on("$sp.service_catalog.cart.count", function($evt, count) {
+		$scope.cartItemCount = count;
+	});
+
+	$scope.$on("$locationChangeSuccess", function(event, data){
+		if(c.data.isMobile){
+			if($('div#popup_todos_mobile').is(":visible"))
+				$('li > a#todos_popup').click();
+			else if($('div#popup_cases_mobile').is(":visible"))
+				$('li > a#cases_popup').click();
+		} else {
+			$('li.open > a#cases_popup').click();
+			$('li.open > a#todos_popup').click();	
+		}
+	});
+
+	$scope.$on('sp_loading_indicator', function(e, value) {
+		$scope.loadingIndicator = value;
+	});
+
+	c.processWatchers = function(watcher){
+		setTimeout($scope.reloadHeader,20);
+	};
+
+	/* Record Watchers */ 
+	if (c.data.recordWatchers && c.data.recordWatchers.length > 0) {
+		angular.forEach(c.data.recordWatchers, function(watcher) {
+			spUtil.recordWatch($scope, watcher.table, watcher.filter, c.processWatchers);
+		});
+	}
+
+	$scope.reloadHeader = function(actionName) {
+		c.data.action = actionName || c.data.ACTION_TODO_COUNT;
+		if(c.data.action== c.data.ACTION_TODO_COUNT)
+			c.server.get({action:c.data.action}).then(function(resp){
+				c.data.todoCount = resp.data.todoCount;
+				c.todoCountTranslation = i18n.format(c.data.todoCountLabel, String(c.data.todoCount));
+			});
+		else
+			c.server.update();	
+	};
+
+	$scope.openLogin = function () {
+		$scope.modalInstance = $uibModal.open({
+			templateUrl: 'modalLogin',
+			scope: $scope
+		});
+	};
+
+	$rootScope.$on("update.searchpage", function(e, searchPage){
+		$scope.searchPage = searchPage;
+	});
+
+	$rootScope.$on('sp.avatar_changed', function() {
+		$scope.userID = ""; 
+		$timeout(function(){
+			$scope.userID = $scope.user.sys_id;
+		});
+	});
+
+	$scope.isHomepage = function() {
+		if (!$scope.page.id)
+			return true;
+
+		if ($scope.page.id == $scope.portal.homepage_dv)
+			return true;
+
+		return false;
+	};
+
+	$(document).ready(function() {
+		$scope.reloadHeader();
+	});
+	
+	//remove nested ul to fix screen reader issue
+	$timeout(function () {
+		var cartToursWrapper = $('.navbar-header .v'+ scope.data.top.menu.sys_id);
+		
+		if (!cartToursWrapper.length)
+			return;
+		
+		var menu = cartToursWrapper.parent().parent();
+		var menuItems = cartToursWrapper.children();
+		menu.append(menuItems);
+		cartToursWrapper.parent().remove();
+	}, 1000);
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>.navbar-inverse {
+  margin-bottom: 0px;
+  border-radius: 0px; 
+  background-color: $navbar-inverse-bg;
+  .navbar-header {
+    &amp;.nav-container{
+      width: 100%;
+    }
+    .navbar-brand {
+      margin: 0;
+      height: 60px;
+      padding: $sp-logo-margin-y 0px 10px $sp-logo-margin-x;
+      img, span {
+        margin: 0;
+        display: block;
+        max-height: $sp-logo-max-height;
+        max-width: $sp-logo-max-width;
+        position: relative;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+    }
+    #hr_loading_indicator {
+      margin-top: 5px;
+    }
+    .navbar-right .dropdown-menu &gt; li &gt; a {
+      &amp;:hover, &amp;:focus {
+        background-color: darken($navbar-inverse-bg, 8%);
+      }
+    }
+  }
+  .dropdown-menu &gt; li &gt; a {
+    color: $navbar-inverse-link-color;
+  }
+  .dropdown-toggle:focus {
+  	outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+  }
+  .sub-navbar {
+    background-color: $sp-navbar-divider-color;
+    border: none;
+    width: 100%;
+    a {
+      padding: 10px 15px;
+    }
+    #cart-dropdown, #wishlist-menu {
+      display: none;
+      ~ * {
+        display: none !important;
+      }
+    }
+    .navbar-nav &gt; li &gt; a[href="?id=sc_cart"], .navbar-nav &gt; li &gt; a[href="?id=sc_wishlist"] {
+      display: none !important;
+    }
+    .gtd-dropdown-container {
+      display: none;
+    }
+    .open &gt; a, .open &gt; a:focus {
+      background-color: darken($sp-navbar-divider-color, 8%);
+    }
+    #cart-dropdown {
+      display: none;
+      :after {
+        content: "\f0d7";
+        vertical-align: baseline;
+        width: auto;
+        height: auto;
+        border: none;
+        margin-left: 5px !important;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    .dropdown-menu {
+      background-color: $sp-navbar-divider-color;
+      &gt; li &gt; a:hover, &gt; li &gt; a:focus {
+        background-color: darken($sp-navbar-divider-color, 8%);
+      }
+    }
+  }
+  .dropdown-menu {
+    background-color: $navbar-inverse-bg;
+    border: none;
+    &amp;.case-menu {
+      right: 0;
+      left: auto;
+      padding: 0;
+      width: 450px;
+      background: $color-lightest;
+      overflow-y: hidden;
+    }
+  }
+  &gt; .open &gt; a:hover, &gt; .open &gt; a:focus  {
+    background-color: darken($navbar-invese-bg, 8%);
+  }
+  .fa-caret-down {
+    vertical-align: middle;
+    margin-top: 2px;
+  }
+  .caret:before {
+    content: "\f0d7";
+  }
+  .caret {
+    vertical-align: baseline;
+    width: auto;
+    height: auto;
+    border: none;
+    margin-left: 5px !important;
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .label-as-badge {
+    font-size: 1.2rem;
+    margin-left: 5px;
+    background-color: $primary;
+  }
+  .navbar {
+    transition: 250ms opacity ease-in-out; 
+    -webkit-transition: 250ms opacity ease-in-out; 
+    border: 0;
+  }
+  .navbar-fade {
+    opacity: 0.4;
+  }
+  .navbar-collapse {
+    padding-right: 0px;
+  }
+  .case-menu {
+    div#widget-tabs-2 {
+      border: none;
+      &gt; .panel-heading {
+        border: none;
+        bottom-border: 1px solid $border;
+      }
+    }
+  }
+  ul.nav.navbar-nav &gt; div.header-loader {
+    display: none;
+  }
+  
+  .cart-dropdown, .wishlist-menu, .gtd-dropdown-container .empty-dropdown {
+    width: 350px;
+    padding: 0;
+    z-index: 1000;
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+
+    ul {
+      max-height: 300px;
+      overflow: auto;
+    }
+
+    .subtotal {
+      display: block;
+    }
+
+    .item-image {
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      max-width:100%;
+      height:auto;
+    }
+    label, p {
+      padding: 0;
+      margin: 0;
+    }
+    .media {
+      padding: 0;
+      margin: 0;
+    }
+    .media-left &gt; a {
+      display: block;
+      width: 48px;
+      max-width: 48px;
+    }
+    .media-body {
+      label {
+        font-weight: bold;
+      }
+    }
+    li.media {
+      border-top: 1px solid #cccccc;
+      padding: 1rem;
+    }
+    .panel {
+      margin: 0;
+    }
+    .panel .panel-body {
+      padding: 0;
+    }
+    .btn-clear {
+      color: #333;
+      background-color: #fff;
+    }
+    p.quantity-price {
+      padding-top: 0.5rem;
+      span {
+        color: $text-muted;
+        padding-right: 0.5rem;
+      }
+    }
+    .align-right {
+      text-align: right;
+    }
+  }
+
+
+
+  .item-added-tooltip, wishlist-item-added-tooltip {
+    width: 184px;
+    font-size: 14px;
+  }
+
+  .gtd-dropdown-container {
+    .empty-tour-content{
+      text-align: center;
+      margin:40px 20px;
+    }
+    .dropdown-menu li {
+      a {
+        cursor: pointer;
+      }
+      min-width: 20em;
+    }
+    .label-as-badge{
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      padding: 0px;
+      padding-top: 2px;
+    }
+    .badge-container {
+      display: inline-block;
+      width: 12px;
+    }
+  }
+
+}
+@media screen and (min-width: 768px) {
+  .navbar-inverse {
+    .navbar-right &gt; .navbar-nav &gt; div {
+      float: left;
+    }
+    .navbar-right {
+      &gt; ul {
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+
+        -moz-box-orient: horizontal;
+        box-orient: horizontal; 
+        -webkit-box-orient: horizontal;
+      }
+      .navbar-nav &gt; li &gt; a {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+    .navbar-avatar {
+      margin-top: -7px;
+    }
+    a#todos_popup {
+      padding-left:0px;
+    }
+    .navbar-nav .open .dropdown-menu &gt; li &gt; a {
+      padding: 10px 20px;
+    }
+    .navbar-header {
+      position:relative;
+      .dropdown-toggle {
+        height: 60px;
+      }
+    }
+    .temp-mobile {
+      display: inline-block;
+    }
+    .sub-navbar {
+      display: flex;
+      padding-left: 0;
+    }
+    .header-search {
+      margin: 13px 0;
+      width: 23%;
+    }
+  }
+}
+@media (min-width : 320px) and (max-width : 767px) {
+  .navbar-inverse {
+    .dropdown-menu.case-menu {
+      width: 100%;
+    }
+    .navbar-toggle {
+      border: none;
+    }
+    .navbar-nav {
+      display:block;
+      margin-top:0px;
+      margin-bottom:0px;
+      .open .dropdown-menu &gt; li &gt; a {
+        padding: 5px 30px;
+      }
+    }
+    .sub-navbar {
+      padding: 0px 0px;
+    }
+    .upper-collapse {
+      width: 100%;
+      padding-bottom: 0px;
+    }
+    .navbar-collapse {
+      padding-top: 0px;
+      padding-left: 0px;
+      overflow: hidden;
+      ul {
+        margin: 0;
+      }
+    }
+    .header-search {
+      margin-top: 0 !important;
+      padding-bottom: 10px;
+      float: left;
+      width: 100%;
+    }
+    .navbar-header {
+      &gt; ul {
+        display: inline-block;
+        padding: 10px 10px 0 0;
+        float: right;
+        margin: 0;
+      }
+      &gt; li {
+        display: inline-block; 
+      }
+    }
+    .height-adjust {
+      padding: 10px 0px;
+      margin-bottom: 10px;
+    }
+    .popup-edit {
+      background: $color-lightest;
+      position: fixed;
+      top:0; 
+      height:100%;
+      margin-top: 0;
+      max-height:100%;
+      width:100%
+    }
+    .navbar-collapse-label {
+      float: right;
+      margin-right: -5px;
+      margin-top: -7px;
+    }
+    button &gt; span.label {
+      padding: .2em .5em .2em;
+    }
+  }
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id/>
+        <internal>false</internal>
+        <link><![CDATA[function escHeaderLink(scope, element) {
+	$(element).on('click', 'a.navbar-brand', function(e) {
+		scope.expanded = false;
+	});
+	$(element).on('click.nav','.navbar-collapse.in',function(e) {
+		var target = $(e.target);
+		if (target.is('a') && !target.hasClass("dropdown-toggle") && target.siblings('.dropdown-menu').length == 0) {
+			// collapse mobile nav if clicked an anchor that isn't a dropdown toggle
+			scope.expanded = false;
+			return;
+		}
+		
+		// if neither target nor parent is an anchor or the parent anchor is a dropdown-toggle, do nothing
+		if (!target.parent().is('a') || target.parent().hasClass("dropdown-toggle") || target.parent().siblings('.dropdown-menu').length > 0)
+			return;
+		
+		// collapse mobile nav if target is part of a submenu
+		if (target.parents("ul.dropdown-menu").length > 0) {
+			scope.expanded = false;
+			return;
+		}
+		
+		// collapse mobile nav is target is part of the dropdown
+		if (target.parents("div.navbar-collapse").length > 0)
+			scope.expanded = false;
+	});
+	$(element).on('keydown','.dropdown-menu > .header-menu-item',function(e){
+		var target = e.target;
+		if (target.localName == 'a') {
+			if(e.keyCode == 37) {
+				e.preventDefault();
+				$(target).parents('li').removeClass('open');
+				$(target).parents('li').find('a').focus();
+			} else if(e.keyCode == 39) {
+				e.preventDefault();
+				$(target).parents('li').removeClass('open');
+				$(target).parents('li').find('a').focus();
+			}
+			if(e.keyCode == 9) {
+				$(target).parents('li').removeClass('open');
+			}
+		}
+	});
+}]]></link>
+        <name>Copy of ESC Header</name>
+        <option_schema/>
+        <public>true</public>
+        <roles/>
+        <script><![CDATA[(function () {
+	data.ACTION_TODO_COUNT = 'update_todo_count';
+	data.ACTION_LOAD_CASES = 'load_cases';
+	data.isMobile = gs.isMobile();
+	
+	data.isVAActive = new GlidePluginManager().isActive("com.glide.cs.chatbot");
+	
+	// Check for chat properties
+	var isAWAActive = new GlidePluginManager().isActive("com.glide.awa");
+	data.chatSupportEnabled = (gs.getProperty('glide.connect.enabled', 'false') == 'true' && gs.getProperty('glide.connect.support.enabled', 'false') == 'true') || isAWAActive;
+	
+	//Load To-dos count
+	if (!input || input.action == data.ACTION_TODO_COUNT) {
+		var myTodosCountObject= new sn_hr_sp.todoPageUtils().getMyTodosCount();
+		data.todoCount = myTodosCountObject.todoCount;
+		data.todoCountLabel = gs.getMessage("{0} to-dos remaining");
+		data.recordWatchers = myTodosCountObject.recordWatchers;
+
+		// avoid consecutive calls 
+		if(input)
+			return ;
+	}
+
+	if(new GlidePluginManager().isActive("com.sn_hr_core")) {
+		data.isHrCoreActive = true;
+
+		// HR Profile
+		var hrProfileGr = new GlideRecord('sn_hr_core_profile');
+		hrProfileGr.addQuery('user', gs.getUserID());
+		hrProfileGr.setLimit(1);
+		hrProfileGr.query();
+		if (!hrProfileGr.next()) {
+			hrProfileGr.setValue('user', gs.getUserID());
+			hrProfileGr.insert();
+		}
+    }
+	// populate the 'data' object
+	data.link = '?id=hri_user_profile&sys_id='+ gs.getUserID();
+
+	// Defines the support queue ID that will be linked to by the Live Chat link in header
+	data.login_page = $sp.getValue('login_page');
+	var menu = $sp.getValue("sp_rectangle_menu");
+	//Initialize menu objects
+	data.sub = {};
+	data.top = {};
+	data.sub.menu = $sp.getWidgetFromInstance(menu);
+
+	//Copy sub menu to top menu, we want cart up top and menu items in the sub nav
+
+	data.top.menu = JSON.parse(JSON.stringify(data.sub.menu));
+	if (data.sub.menu && data.sub.menu.data) {
+		data.sub.menu.data.replace = true;
+		// Hide login if menu already has link to login
+		data.hasLogin = false;
+		if (data.sub.menu.data.menu.items) {
+			for(var i in data.sub.menu.data.menu.items) {
+				var item = data.sub.menu.data.menu.items[i];
+				if (item.type == 'page' && item.sp_page == data.login_page)
+					data.hasLogin = true;
+			}
+		}
+	}
+
+	// Analytics
+	data.analyticsSupportEnabled = new GlidePluginManager().isActive('com.sn_content_analytics');
+
+	//Clean up items that don't belong
+
+	data.sub.menu.data.cartWidget = {};
+	data.sub.menu.options.enable_cart = false;
+	data.sub.menu.data.showTours = false;
+	data.top.menu.data.menu.items = [];
+	
+	data.loginWidget = $sp.getWidgetFromInstance('login-modal');
+	data.typeahead = $sp.getWidgetFromInstance('typeahead-search');
+})();]]></script>
+        <servicenow>false</servicenow>
+        <static>false</static>
+        <sys_class_name>sp_header_footer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-17 08:55:42</sys_created_on>
+        <sys_id>dc803cbfdba250102aba7b3868961923</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Copy of ESC Header</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sp_header_footer_dc803cbfdba250102aba7b3868961923</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-17 08:56:10</sys_updated_on>
+        <template><![CDATA[<!-- Nav bar menu items starts-->
+<nav class="navbar-inverse" role="navigation">
+
+  <!-- Piece above searchbar -->
+
+  <div class="clearfix">
+    <div class="navbar-header nav-container">
+
+      <!-- Logo -->
+      <a class="navbar-brand" ng-if="::!portal.logo" href="?id={{::portal.homepage_dv}}"><span>{{::portal.title}}</span></a>
+      <a class="navbar-brand navbar-brand-logo" ng-if="::portal.logo" href="?id={{::portal.homepage_dv}}" aria-label="${Home page}">
+        <img ng-src="{{::portal.logo}}" alt="{{::portal.title}}"/>
+      </a>
+
+      <!-- Toggle Button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" ng-class="(expanded) ? 'in' : 'collapsed'" ng-click="expanded = !expanded" aria-expanded="false">
+        <span ng-show="(data.todoCount + data.requestCount + cartItemCount) > 0" class="label label-as-badge label-primary navbar-collapse-label">{{data.todoCount + data.requestCount + cartItemCount}}</span>
+        <span class="sr-only">${Toggle navigation}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Search Bar Desktop -->
+      <div class="header-search navbar-header col-sm-3">
+        <sp-widget widget="data.typeahead"></sp-widget>
+      </div>
+
+      <!-- Header Navbar -->
+      <div class="navbar-collapse upper-collapse navbar-right collapse collapsed" ng-class="(expanded) ? 'in' : 'collapsed'" aria-expanded="false">
+        <div class="height-adjust">
+          <ul class="nav navbar-nav">
+            <li class="hidden-xs" ng-show="loadingIndicator">  
+              <a> 
+                <div class="header-loader"id="hr_loading_indicator"> 
+                  <div class="hidden-xs sp-loading-indicator la-sm"> 
+                    <div></div> 
+                    <div></div> 
+                    <div></div> 
+                  </div> 
+                </div> 
+              </a> 
+            </li> 
+            <li class="visible-xs-block m-t-sm m-b-sm">
+              <a href="{{data.link}}" ng-class="getClass(data.link)">
+                <span class="navbar-avatar"><sn-avatar class="avatar-small-medium" show-presence="false" primary="user.sys_id" /></span>
+                <span class="visible-xs-inline">{{user.name}}</span>
+              </a>
+            </li>  
+             <a href="x_263984_work_assi_work_assigment.do" target=_blank>
+                <span ng-bind-html=""></span>
+                <span ng-show="" class="label label-as-badge label-primary">Create fraud case</span>
+              </a>
+            <li class="hidden-xs">
+              <a href="?id=hrm_todos_page" ng-class="getClass('?id=hrm_todos_page')" id="todos_link"  aria-label="${To-dos}, {{c.todoCountTranslation}}">
+                <span ng-bind-html="'${To-dos}'"></span>
+                <span ng-show="data.todoCount" class="label label-as-badge label-primary">{{data.todoCount}}</span>
+              </a>
+            </li>
+            <li class="hidden-xs">
+              <a href="?id=my_requests" id="cases_popup" aria-label="${Requests}"> <!-- TODO: Link for requests -->
+                <span ng-bind-html="'${Requests}'" aria-hidden="true"></span>
+                <span ng-show="data.requestCount" class="label label-as-badge label-primary">{{data.requestCount}}</span>
+              </a>
+            </li>
+            <li>
+            	<sp-widget widget="data.top.menu" id="menu_item"></sp-widget>
+            </li>
+            
+            <li class="visible-xs" ng-if="data.isHrCoreActive">
+              <a href="?id=hrm_todos_page" id="todos_mobile" aria-label="${To-dos}, {{data.todoCountTranslation}}">
+                <span ng-bind-html="'${To-dos}'" aria-hidden="true"></span>
+                <span ng-show="data.todoCount" class="label label-as-badge label-primary">{{data.todoCount}}</span>
+              </a>
+            </li>
+            <li class="visible-xs">
+              <a href="?id=my_requests" id="requests_mobile" aria-label="${Requests}">
+                <span ng-bind-html="'${Requests}'" aria-hidden="true"></span>
+                <span ng-show="data.requestCount" class="label label-as-badge label-primary">{{data.requestCount}}</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Avatar and its drop down -->
+          <ul class="nav navbar-nav" role="menubar">
+            <li class="hidden-xs dropdown" id="avatar_item">
+              <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" aria-label="${User Profile}">
+                <span class="navbar-avatar"><sn-avatar class="avatar-small-medium avatar-container" show-presence="false" primary="user.sys_id" />
+                  <i class="m-l-xs fa fa-caret-down"/>
+                </span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header-menu-item"><a href="{{data.link}}">${Profile}</a>
+                </li>
+                <li class="header-menu-item"><a href="{{::portal.logoutUrl}}">${Logout}</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Sub Navbar -->
+
+  <div class="navbar-collapse sub-navbar clearfix collapse collapsed" ng-class="(expanded) ? 'in' : 'collapsed'" aria-expanded="false">
+    <div class="height-adjust">
+      <sp-widget widget="data.sub.menu"></sp-widget>
+      <ul ng-if="::(!user.logged_in && page.id != portal.login_page_dv && !data.hasLogin)" class="nav navbar-nav">
+        <li><a href ng-click="openLogin()">${Login}</a>
+        </li>
+      </ul>
+      <ul ng-if="::user.logged_in" class="nav navbar-nav">
+        <!-- chat, avatar, and logout -->
+        <li ng-if="data.chatSupportEnabled == true || isVAActive">
+          <a href="javascript:void(0)" ng-click="toggleChat()" id="va_chat" aria-label="${Chat}" ng-class="mobileDevice?'active-chat':'inactive-chat'">
+            <span ng-bind-html="'${Chat}'" aria-hidden="true"></span>
+            <span ng-if="mobileDevice && showChat" class="chat-active" ng-bind-html="'${Active}'" aria-hidden="true"></span>
+          </a>
+        </li>
+        <li class="visible-xs-block"><a href="{{::portal.logoutUrl}}">${Logout}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Analytics -->
+  <widget ng-if="data.analyticsSupportEnabled" id="cda-site-analytics" options="{'enable_logging': false}"></widget>
+</nav>]]></template>
+    </sp_header_footer>
+</record_update>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_master_config">
+    <sys_aw_master_config action="DELETE">
+        <active>true</active>
+        <brand_color/>
+        <compiled_page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</compiled_page>
+        <compiled_page_registry/>
+        <description/>
+        <global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search>
+        <global_search_data display_value="Work Assignment Search Context Config">471ad02adba210102aba7b3868961903</global_search_data>
+        <hide_search_results_count>false</hide_search_results_count>
+        <name>Work Assignment</name>
+        <navigation_type>tab</navigation_type>
+        <notifications_enabled>true</notifications_enabled>
+        <primary_color/>
+        <search_enabled>true</search_enabled>
+        <sys_class_name>sys_aw_master_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:05:27</sys_created_on>
+        <sys_id>c31ad02adba210102aba7b3868961905</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work Assignment</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_aw_master_config_c31ad02adba210102aba7b3868961905</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:05:27</sys_updated_on>
+        <user_preference_controls_enabled>true</user_preference_controls_enabled>
+        <workspace_logo/>
+        <workspace_url>work_assignment</workspace_url>
+    </sys_aw_master_config>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</application>
+        <file_path/>
+        <instance_id>93b8e50adb075704cbf6d5b0cf9619df</instance_id>
+        <instance_name>dev63521</instance_name>
+        <name>sys_aw_master_config_c31ad02adba210102aba7b3868961905</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aw_master_config"><sys_aw_master_config action="INSERT_OR_UPDATE"><active>true</active><brand_color/><compiled_page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</compiled_page><compiled_page_registry/><description/><global_search display_value="Default search settings">97a574ea53c0130084acddeeff7b12a6</global_search><global_search_data display_value="Work Assignment Search Context Config">471ad02adba210102aba7b3868961903</global_search_data><hide_search_results_count>false</hide_search_results_count><name>Work Assignment</name><navigation_type>tab</navigation_type><notifications_enabled>true</notifications_enabled><primary_color/><search_enabled>true</search_enabled><sys_class_name>sys_aw_master_config</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-13 10:05:27</sys_created_on><sys_id>c31ad02adba210102aba7b3868961905</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Work Assignment</sys_name><sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package><sys_policy/><sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope><sys_update_name>sys_aw_master_config_c31ad02adba210102aba7b3868961905</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-13 10:05:27</sys_updated_on><user_preference_controls_enabled>true</user_preference_controls_enabled><workspace_logo/><workspace_url>work_assignment</workspace_url></sys_aw_master_config></record_update>]]></payload>
+        <payload_hash>51493677</payload_hash>
+        <record_name>Work Assignment</record_name>
+        <reverted_from/>
+        <source>8ac810e6dba210102aba7b3868961974</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-24 05:12:22</sys_created_on>
+        <sys_id>fc80484adb3210102aba7b386896190e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1741ee1b5830000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-24 05:12:22</sys_updated_on>
+        <type>Workspace</type>
+        <update_guid>531ad02adba210107fe58709c8e3d527</update_guid>
+        <update_guid_history>531ad02adba210107fe58709c8e3d527:-1467449754,531ad02adba210107fe58709c8e3d527:-1467449754</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-24 05:12:23</sys_created_on>
+        <sys_db_object display_value="" name="sys_aw_master_config">sys_aw_master_config</sys_db_object>
+        <sys_id>00078500d798461080000183c19c1040</sys_id>
+        <sys_metadata>c31ad02adba210102aba7b3868961905</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work Assignment</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_scope_delete display_value="">3a37aa626e9345d899b41d284af3c124</sys_scope_delete>
+        <sys_update_name>sys_aw_master_config_c31ad02adba210102aba7b3868961905</sys_update_name>
+        <sys_update_version display_value="sys_aw_master_config_c31ad02adba210102aba7b3868961905">fc80484adb3210102aba7b386896190e</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-24 05:12:23</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

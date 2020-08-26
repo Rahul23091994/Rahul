@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_source">
+    <sys_search_source action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <name>Work assigments</name>
+        <source_table>x_263984_work_assi_work_assigment</source_table>
+        <sys_class_name>sys_search_source</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:05:28</sys_created_on>
+        <sys_id>d31ad02adba210102aba7b3868961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work assigments</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_search_source_d31ad02adba210102aba7b3868961928</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:05:28</sys_updated_on>
+    </sys_search_source>
+    <sys_translated_text action="delete_multiple" query="documentkey=d31ad02adba210102aba7b3868961928"/>
+</record_update>

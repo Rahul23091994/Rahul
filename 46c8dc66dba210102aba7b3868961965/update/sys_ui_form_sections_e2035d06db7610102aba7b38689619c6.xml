@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="e2035d06db7610102aba7b38689619c6" sys_domain="global" table="x_263984_work_assi_work_assigment" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:16:38</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f4e3d946db7610102aba7b38689619ac</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="x_263984_work_assi_work_assigment" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">e2035d06db7610102aba7b38689619c6</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="x_263984_work_assi_work_assigment" sys_domain="global" view="4a2cec89dbe210102aba7b3868961947">c1629106db7610102aba7b38689619f9</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:16:38</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>x_263984_work_assi_work_assigment</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2020-08-24 11:12:56</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e2035d06db7610102aba7b38689619c6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_263984_work_assi_work_assigment</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+            <sys_update_name>sys_ui_form_sections_e2035d06db7610102aba7b38689619c6</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2020-08-24 11:12:56</sys_updated_on>
+            <sys_user/>
+            <view display_value="Workspace" name="workspace">4a2cec89dbe210102aba7b3868961947</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>

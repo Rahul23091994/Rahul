@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_element">
+    <sys_ux_content_placeholder_elem action="DELETE">
+        <attrs/>
+        <children/>
+        <component/>
+        <is_root>false</is_root>
+        <layout/>
+        <limit>1</limit>
+        <macroponent/>
+        <macroponent_config/>
+        <name>Landing Page Placeholder</name>
+        <order>0</order>
+        <page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page>
+        <parent display_value="">902a142adba210102aba7b386896196f</parent>
+        <parent_slot/>
+        <picker/>
+        <picker_condition/>
+        <sys_class_name>sys_ux_content_placeholder_elem</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:05:33</sys_created_on>
+        <sys_id>e82a142adba210102aba7b38689619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Landing Page Placeholder</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_ux_content_placeholder_elem_e82a142adba210102aba7b38689619cb</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:05:33</sys_updated_on>
+        <tree_root/>
+    </sys_ux_content_placeholder_elem>
+    <sys_variable_value action="DELETE" query="document_key=e82a142adba210102aba7b38689619cb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</application>
+        <file_path/>
+        <instance_id>93b8e50adb075704cbf6d5b0cf9619df</instance_id>
+        <instance_name>dev63521</instance_name>
+        <name>sys_ux_content_placeholder_elem_e82a142adba210102aba7b38689619cb</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_page_element"><sys_ux_content_placeholder_elem action="INSERT_OR_UPDATE"><attrs/><children/><component/><is_root>false</is_root><layout/><limit>1</limit><macroponent/><macroponent_config/><name>Landing Page Placeholder</name><order>0</order><page display_value="Workspace Core">b70867ad0f603300bb57f4a1ff767e15</page><parent display_value="">902a142adba210102aba7b386896196f</parent><parent_slot/><picker/><picker_condition/><sys_class_name>sys_ux_content_placeholder_elem</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-13 10:05:33</sys_created_on><sys_id>e82a142adba210102aba7b38689619cb</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Landing Page Placeholder</sys_name><sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package><sys_policy/><sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope><sys_update_name>sys_ux_content_placeholder_elem_e82a142adba210102aba7b38689619cb</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-13 10:05:33</sys_updated_on><tree_root/></sys_ux_content_placeholder_elem><sys_variable_value action="delete_multiple" query="document_key=e82a142adba210102aba7b38689619cb"/></record_update>]]></payload>
+        <payload_hash>-651715285</payload_hash>
+        <record_name>Landing Page Placeholder</record_name>
+        <reverted_from/>
+        <source>8ac810e6dba210102aba7b3868961974</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-24 05:12:20</sys_created_on>
+        <sys_id>e880084adb3210102aba7b3868961967</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1741ee1aea50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-24 05:12:20</sys_updated_on>
+        <type>UX Content Placeholder</type>
+        <update_guid>202a142ab7a21010cfcb0ada64c010ce</update_guid>
+        <update_guid_history>202a142ab7a21010cfcb0ada64c010ce:362636589,202a142ab7a21010cfcb0ada64c010ce:362636589</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-24 05:12:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_content_placeholder_elem">sys_ux_content_placeholder_elem</sys_db_object>
+        <sys_id>4078bb216f94484a8481710d4cd73a39</sys_id>
+        <sys_metadata>e82a142adba210102aba7b38689619cb</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Landing Page Placeholder</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_scope_delete display_value="">3a37aa626e9345d899b41d284af3c124</sys_scope_delete>
+        <sys_update_name>sys_ux_content_placeholder_elem_e82a142adba210102aba7b38689619cb</sys_update_name>
+        <sys_update_version display_value="sys_ux_content_placeholder_elem_e82a142adba210102aba7b38689619cb">e880084adb3210102aba7b3868961967</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-24 05:12:20</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

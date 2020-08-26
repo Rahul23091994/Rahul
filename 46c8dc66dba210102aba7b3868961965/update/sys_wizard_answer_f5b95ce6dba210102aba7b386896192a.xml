@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_wizard_answer">
+    <sys_wizard_answer action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>New Work assigment</answer>
+        <button_label/>
+        <dependent_value/>
+        <element/>
+        <name>Work assigment</name>
+        <next_question/>
+        <order>100</order>
+        <payload_name/>
+        <question display_value="Task" name="Task">a5b8a885db2210102aba7b38689619e4</question>
+        <roles/>
+        <script/>
+        <sys_class_name>sys_wizard_answer</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:03:44</sys_created_on>
+        <sys_id>f5b95ce6dba210102aba7b386896192a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Work assigment</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_wizard_answer_f5b95ce6dba210102aba7b386896192a</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:03:44</sys_updated_on>
+        <table/>
+        <target_url>x_263984_work_assi_work_assigment.do</target_url>
+        <type>1</type>
+    </sys_wizard_answer>
+</record_update>

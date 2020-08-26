@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Fraud case" max_length="40" name="x_263984_work_assi_work_assigment" sizeclass="17" text_index="true" type="collection">
+        <element choice="1" label="Case Stages" max_length="40" name="case_stages" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Awaiting information" value="awaiting_information"/>
+                <element inactive_on_update="false" label="Awaiting initial action" value="Awaiting initial action"/>
+                <element inactive_on_update="false" label="Awaiting resolution" value="Awaiting resolution"/>
+                <element inactive_on_update="false" label="Closed-not substantiated" value="Closed-not substantiated"/>
+                <element inactive_on_update="false" label="Closed-resolved" value="Closed-resolved"/>
+                <element inactive_on_update="false" label="Under Action" value="under_action"/>
+            </choice>
+        </element>
+        <element choice="1" label="Category" max_length="100" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Banking fraud" value="Banking fraud"/>
+                <element inactive_on_update="false" label="Bribery/corruption" value="Bribery/corruption"/>
+                <element inactive_on_update="false" label="Debit and Credit card fraud" value="Debit and Credit card fraud"/>
+                <element inactive_on_update="false" label="Employee fraud" value="Employee fraud"/>
+                <element inactive_on_update="false" label="Healthcare fraud" value="Healthcare fraud"/>
+                <element inactive_on_update="false" label="Insurance fraud" value="Insurance fraud"/>
+            </choice>
+        </element>
+    </element>
+</database>

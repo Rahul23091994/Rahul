@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_sg_action_param_map">
+    <sys_sg_action_param_map action="INSERT_OR_UPDATE">
+        <button display_value="Edit Button (Work assigment)">8f6a946adba210102aba7b386896193d</button>
+        <item_parameter display_value="Work assigment location">0f6a946adba210102aba7b386896193c</item_parameter>
+        <sys_class_name>sys_sg_action_param_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:06:49</sys_created_on>
+        <sys_id>8f6a946adba210102aba7b386896194e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>0f6a946adba210102aba7b386896193c</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_sg_action_param_map_8f6a946adba210102aba7b386896194e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:06:49</sys_updated_on>
+        <ui_parameter display_value="Location">8b6a946adba210102aba7b386896194c</ui_parameter>
+    </sys_sg_action_param_map>
+</record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="DELETE">
+        <active>true</active>
+        <application/>
+        <assessment/>
+        <device_type/>
+        <filter/>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Work Assigment Tasks</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_263984_work_assi_work_assigment_task</name>
+        <order/>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>x_263984_work_assi.work_assigment_task_user</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:34:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0bb0a422dbe210102aba7b38689619e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Fraud case Tasks</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_app_module_0bb0a422dbe210102aba7b38689619e3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-14 07:00:36</sys_updated_on>
+        <timeline_page/>
+        <title>Fraud case Tasks</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</application>
+        <file_path/>
+        <instance_id>93b8e50adb075704cbf6d5b0cf9619df</instance_id>
+        <instance_name>dev63521</instance_name>
+        <name>sys_app_module_0bb0a422dbe210102aba7b38689619e3</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module"><sys_app_module action="INSERT_OR_UPDATE"><active>true</active><application/><assessment/><device_type/><filter/><hint/><homepage/><image/><link_type>LIST</link_type><map_page/><mobile_title>Work Assigment Tasks</mobile_title><mobile_view_name>Mobile</mobile_view_name><name>x_263984_work_assi_work_assigment_task</name><order/><override_menu_roles>false</override_menu_roles><query/><report/><roles>x_263984_work_assi.work_assigment_task_user</roles><sys_class_name>sys_app_module</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-13 10:34:25</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>0bb0a422dbe210102aba7b38689619e3</sys_id><sys_mod_count>1</sys_mod_count><sys_name>Fraud case Tasks</sys_name><sys_overrides/><sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package><sys_policy/><sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope><sys_update_name>sys_app_module_0bb0a422dbe210102aba7b38689619e3</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-14 07:00:36</sys_updated_on><timeline_page/><title>Fraud case Tasks</title><uncancelable>false</uncancelable><view_name/><window_name/></sys_app_module></record_update>]]></payload>
+        <payload_hash>482340170</payload_hash>
+        <record_name>Fraud case Tasks</record_name>
+        <reverted_from/>
+        <source>8ac810e6dba210102aba7b3868961974</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-18 11:00:28</sys_created_on>
+        <sys_id>6da65200dbb690102aba7b3868961941</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174013a3e200000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-18 11:00:28</sys_updated_on>
+        <type>Module</type>
+        <update_guid>7869b07e72625010ce03a2eff94b2ce8</update_guid>
+        <update_guid_history>7869b07e72625010ce03a2eff94b2ce8:-1422231109,7869b07e72625010ce03a2eff94b2ce8:-1422231109,07b0a42283e210105ef1973bd76b27e6:1845674724</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Fraud case Tasks">f92c5244dbb690102aba7b3868961985</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-18 11:24:30</sys_created_on>
+        <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
+        <sys_id>2fbd33479ff944d295e8200a4eb9b229</sys_id>
+        <sys_metadata>0bb0a422dbe210102aba7b38689619e3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fraud case Tasks</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_scope_delete display_value="">3a37aa626e9345d899b41d284af3c124</sys_scope_delete>
+        <sys_update_name>sys_app_module_0bb0a422dbe210102aba7b38689619e3</sys_update_name>
+        <sys_update_version display_value="sys_app_module_0bb0a422dbe210102aba7b38689619e3">6da65200dbb690102aba7b3868961941</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-18 11:24:30</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

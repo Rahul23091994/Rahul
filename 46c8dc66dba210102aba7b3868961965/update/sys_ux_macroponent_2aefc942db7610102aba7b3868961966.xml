@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_macroponent">
+    <sys_ux_macroponent action="INSERT_OR_UPDATE">
+        <associated_types/>
+        <component_dependencies/>
+        <composition>[ {
+  "elementId" : "ckeiierynwaaaaaaccddbhhddpsccarbbzjj",
+  "elementLabel" : "Container",
+  "propertyValues" : {
+    "label" : "Fraud case Management",
+    "bare" : false,
+    "type" : "default",
+    "bgvar" : "neutral-0",
+    "border" : true,
+    "canCollapse" : false,
+    "collapsed" : false
+  },
+  "slot" : "cke8erynx00033b73ai5yx9iw",
+  "definition" : {
+    "id" : "80653115e23949b501e719ae9b0b42a6",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : {
+    "composition" : [ {
+      "elementId" : "ckeiietpfnaaaaaahhddbhhddeeiicchiihbb",
+      "elementLabel" : "Report/PA Widget",
+      "propertyValues" : {
+        "label" : "",
+        "reportSysId" : "ec293544db3690102aba7b386896199c",
+        "paWidgetSysId" : "",
+        "variant" : "MEDIUM",
+        "border" : false,
+        "refreshInterval" : "",
+        "isRealtime" : false,
+        "refreshFrequency" : "0",
+        "kpiDetailsNavigation" : false
+      },
+      "slot" : "cke8etpfo00083b734zwzn6dl",
+      "definition" : {
+        "id" : "7dbc62b27efa88d6d910579a68c7a65d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null
+    }, {
+      "elementId" : "ckeiiezpiihhaaaaaawddbhhddcrqfgguge",
+      "elementLabel" : "Report/PA Widget",
+      "propertyValues" : {
+        "label" : "",
+        "reportSysId" : "5e706500dbf290102aba7b38689619a4",
+        "paWidgetSysId" : "",
+        "variant" : "MEDIUM",
+        "border" : false,
+        "refreshInterval" : "",
+        "isRealtime" : false,
+        "refreshFrequency" : "0",
+        "kpiDetailsNavigation" : false
+      },
+      "slot" : "cke8ezp88000x3b73q7l325gn",
+      "definition" : {
+        "id" : "7dbc62b27efa88d6d910579a68c7a65d",
+        "type" : "MACROPONENT"
+      },
+      "overrides" : null
+    } ],
+    "layout" : {
+      "default" : {
+        "type" : "rowColumn",
+        "root" : {"id":"cke8ezp89000z3b73avied17c","type":"row","columns":[{"type":"column","id":"cke8ezp89000y3b73fldck6ju","slotName":"cke8ezp88000x3b73q7l325gn","size":"6"},{"type":"column","id":"cke8etpfo00093b733nlpmm6x","size":"6","rows":[{"type":"row","id":"cke8etpfo000a3b73kmi3i9do","slotName":"cke8etpfo00083b734zwzn6dl"}]}]},
+        "items" : null,
+        "rules" : null,
+        "styles" : null
+      }
+    }
+  }
+}, {
+  "elementId" : "ckeiifaagmwaaaabbbbddbhhddhhbbcclaabvff",
+  "elementLabel" : "List",
+  "propertyValues" : {
+    "listTitle" : "All Active Tasks",
+    "table" : "task",
+    "query" : "active=true",
+    "columns" : "",
+    "limit" : "5",
+    "maxColumns" : "5",
+    "page" : "1",
+    "hideHeader" : false,
+    "hideTitle" : false,
+    "hideTitleRowCount" : false,
+    "hideRefreshButton" : false,
+    "hideLastRefreshedText" : false,
+    "hideLinks" : false,
+    "hideViewAll" : false,
+    "hideHighlightedValues" : false,
+    "hideCellFilter" : true,
+    "hideCheckboxHover" : true,
+    "hideColumnFiltering" : true,
+    "hideColumnGrouping" : true,
+    "hideColumnSorting" : false,
+    "hideFilterPanel" : false,
+    "hideFirstPage" : false,
+    "hideLastPage" : false,
+    "hideLimitSelector" : false,
+    "hideMenuButton" : true,
+    "hideMultiEdit" : false,
+    "hideDeclarativeActions" : false,
+    "hideNextPage" : false,
+    "hidePages" : false,
+    "hidePagination" : true,
+    "hidePanel" : true,
+    "hidePanelAdvanced" : false,
+    "hidePanelConditionDelete" : false,
+    "hidePanelFooter" : false,
+    "hidePanelRestore" : false,
+    "hidePreviousPage" : false,
+    "hideQuickEdit" : true,
+    "hideRange" : false,
+    "hideRowCount" : false,
+    "hideRowSelector" : false,
+    "hideSelectAll" : true,
+    "hideEmptyStateImage" : false,
+    "hideDBViews" : false,
+    "hideUnnecessaryRowSelectors" : true
+  },
+  "slot" : "cke8f0gmx00123b73b8wq97dq",
+  "definition" : {
+    "id" : "2b1c080881e05dc63b917044290b233f",
+    "type" : "MACROPONENT"
+  },
+  "overrides" : null
+} ]</composition>
+        <data/>
+        <events/>
+        <extends display_value="Landing Page Template">19be392623033300f4b4c50947bf65ba</extends>
+        <interactions/>
+        <layout>{
+  "default" : {
+    "type" : "rowColumn",
+    "root" : {"type":"column","id":"cke8eryny00043b73h2pdrsed","rows":[{"type":"row","id":"cke8eryny00053b73ankzkzyw","slotName":"cke8erynx00033b73ai5yx9iw"},{"id":"cke8f0gmx00133b73yiyokr0g","slotName":"cke8f0gmx00123b73b8wq97dq","type":"row"}],"size":"12"},
+    "items" : null,
+    "rules" : null,
+    "styles" : null
+  }
+}</layout>
+        <macroponent_dependencies/>
+        <name>Fraud case Management</name>
+        <props/>
+        <root_component/>
+        <root_component_config/>
+        <schema_version>1.0.0</schema_version>
+        <sys_class_name>sys_ux_macroponent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-24 10:59:16</sys_created_on>
+        <sys_id>2aefc942db7610102aba7b3868961966</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Fraud case Management</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_ux_macroponent_2aefc942db7610102aba7b3868961966</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-24 11:15:26</sys_updated_on>
+    </sys_ux_macroponent>
+</record_update>

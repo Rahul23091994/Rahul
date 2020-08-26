@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="DELETE">
+        <category display_value="" name="x_263984_work_assi_work_assigment_task">x_263984_work_assi_work_assigment_task</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>WORT</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:34:26</sys_created_on>
+        <sys_id>dfb0e422dbe210102aba7b386896191f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WORT</sys_name>
+        <sys_package display_value="Work Assignment" source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Work Assignment">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sys_number_dfb0e422dbe210102aba7b386896191f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:34:26</sys_updated_on>
+    </sys_number>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</application>
+        <file_path/>
+        <instance_id>93b8e50adb075704cbf6d5b0cf9619df</instance_id>
+        <instance_name>dev63521</instance_name>
+        <name>sys_number_dfb0e422dbe210102aba7b386896191f</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number"><sys_number action="INSERT_OR_UPDATE"><category display_value="" name="x_263984_work_assi_work_assigment_task">x_263984_work_assi_work_assigment_task</category><maximum_digits>7</maximum_digits><number>1000</number><prefix>WORT</prefix><sys_class_name>sys_number</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2020-08-13 10:34:26</sys_created_on><sys_id>dfb0e422dbe210102aba7b386896191f</sys_id><sys_mod_count>0</sys_mod_count><sys_name>WORT</sys_name><sys_package display_value="Work Assignment" source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package><sys_policy/><sys_scope display_value="Work Assignment">46c8dc66dba210102aba7b3868961965</sys_scope><sys_update_name>sys_number_dfb0e422dbe210102aba7b386896191f</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2020-08-13 10:34:26</sys_updated_on></sys_number></record_update>]]></payload>
+        <payload_hash>1346644177</payload_hash>
+        <record_name>WORT</record_name>
+        <reverted_from/>
+        <source>8ac810e6dba210102aba7b3868961974</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-13 10:34:26</sys_created_on>
+        <sys_id>e7b0e422dbe210102aba7b3868961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>173e7629d410000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-13 10:34:26</sys_updated_on>
+        <type>Number</type>
+        <update_guid>23b0e422d8e2101003d9ee7a47e0dd28</update_guid>
+        <update_guid_history>23b0e422d8e2101003d9ee7a47e0dd28:1346644177</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-18 11:24:31</sys_created_on>
+        <sys_db_object display_value="" name="sys_number">sys_number</sys_db_object>
+        <sys_id>6422e48c1254427a8fe41639e43d7261</sys_id>
+        <sys_metadata>dfb0e422dbe210102aba7b386896191f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>WORT</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_parent display_value="">07ff14aedba210102aba7b3868961957</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_scope_delete display_value="">3a37aa626e9345d899b41d284af3c124</sys_scope_delete>
+        <sys_update_name>sys_number_dfb0e422dbe210102aba7b386896191f</sys_update_name>
+        <sys_update_version display_value="sys_number_dfb0e422dbe210102aba7b386896191f">e7b0e422dbe210102aba7b3868961928</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-18 11:24:31</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
