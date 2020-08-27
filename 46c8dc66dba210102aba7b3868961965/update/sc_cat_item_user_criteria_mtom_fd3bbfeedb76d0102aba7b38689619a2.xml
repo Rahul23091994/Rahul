@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_mtom">
+    <sc_cat_item_user_criteria_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Create Fraud case">ad6ac482db7210102aba7b3868961988</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_mtom</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-26 12:50:25</sys_created_on>
+        <sys_id>fd3bbfeedb76d0102aba7b38689619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Create Fraud case.Fraudroles</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_mtom_fd3bbfeedb76d0102aba7b38689619a2</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-26 12:50:25</sys_updated_on>
+        <user_criteria display_value="Fraudroles">d64c7b2adbb6d0102aba7b38689619f2</user_criteria>
+    </sc_cat_item_user_criteria_mtom>
+</record_update>

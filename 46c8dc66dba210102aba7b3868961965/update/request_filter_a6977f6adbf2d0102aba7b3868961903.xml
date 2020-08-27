@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="request_filter">
+    <request_filter action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_to>1</applies_to>
+        <data_item/>
+        <filter table="x_263984_work_assi_work_assigment">stateIN-5,1,2,3^EQ<item display_value="-5,1,2,3" endquery="false" field="state" goto="false" newquery="false" operator="IN" or="false" value="-5,1,2,3"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <group/>
+        <item_stream/>
+        <last_used/>
+        <mobile>false</mobile>
+        <portal_page display_value="ticket">84af292247132100ba13a5554ee4909e</portal_page>
+        <primary_display>short_description</primary_display>
+        <roles/>
+        <secondary_display>number,priority,state</secondary_display>
+        <short_description/>
+        <sys_class_name>request_filter</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-08-26 12:31:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a6977f6adbf2d0102aba7b3868961903</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Fraud managemnt</sys_name>
+        <sys_package display_value="Fraud case detection " source="x_263984_work_assi">46c8dc66dba210102aba7b3868961965</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Fraud case detection ">46c8dc66dba210102aba7b3868961965</sys_scope>
+        <sys_update_name>request_filter_a6977f6adbf2d0102aba7b3868961903</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-08-26 12:31:39</sys_updated_on>
+        <table>x_263984_work_assi_work_assigment</table>
+        <table_name/>
+        <title>Fraud managemnt</title>
+        <user/>
+    </request_filter>
+    <sys_translated_text action="delete_multiple" query="documentkey=a6977f6adbf2d0102aba7b3868961903"/>
+</record_update>
